@@ -7,7 +7,6 @@
     "lazyvim.plugins.extras.lang.git",
     "lazyvim.plugins.extras.lang.java",
     "lazyvim.plugins.extras.lang.kotlin",
-    "lazyvim.plugins.extras.lang.php",
     "lazyvim.plugins.extras.lang.python",
     "lazyvim.plugins.extras.lang.rust",
     "lazyvim.plugins.extras.lang.sql",
@@ -17,8 +16,9 @@
     "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
+  "install_version": 7,
   "news": {
     "NEWS.md": "10960"
   },
-  "version": 7
+  "version": 8
 }
