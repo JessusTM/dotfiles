@@ -13,3 +13,17 @@ git config --global core.pager "cat"
 source /home/jesus/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/zsh-syntax-highlighting/themes/rose-pine-zsh-syntax-highlighting.zsh
 ```
+---
+### Visual Studio Code 
+Desde el directorio clonado «dotfiles»:
+```bash
+rm -rf ~/.vscode 
+cp -r ./.vscode ~
+```
+---
+### NVIM 
+Desde el directorio clonado «dotfiles»:
+```bash
+rm -rf ~/.config/nvim 
+cp -r ./nvim ~/.config
+```
