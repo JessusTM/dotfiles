@@ -8,6 +8,13 @@ git config --global core.editor "nvim"
 git config --global core.pager "cat"
 ```
 ---
+### ZSH 
+Desde el directorio clonado «dotfiles»:
+```bash
+rm -rf ~/.zshrc
+cp -r .zshrc ~
+```
+---
 ### ZSH Syntax Highlighting
 ```bash
 source /home/jesus/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -18,12 +25,12 @@ source ~/zsh-syntax-highlighting/themes/rose-pine-zsh-syntax-highlighting.zsh
 Desde el directorio clonado «dotfiles»:
 ```bash
 rm -rf ~/.vscode 
-cp -r ./.vscode ~
+cp -r .vscode ~
 ```
 ---
 ### NVIM 
 Desde el directorio clonado «dotfiles»:
 ```bash
 rm -rf ~/.config/nvim 
-cp -r ./nvim ~/.config
+cp -r nvim ~/.config
 ```
