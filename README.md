@@ -34,3 +34,10 @@ Desde el directorio clonado «dotfiles»:
 rm -rf ~/.config/nvim 
 cp -r nvim ~/.config
 ```
+---
+### TMUX
+Desde el directorio clonado «dotfiles»:
+```bash
+rm -rf ~/.tmux.conf 
+cp -r .tmux.conf ~
+```
