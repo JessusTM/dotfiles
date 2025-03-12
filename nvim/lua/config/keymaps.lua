@@ -33,8 +33,5 @@ keymap.set("n", "<C-S-l>", "<C-w>>")
 keymap.set("n", "<C-S-k>", "<C-w>+")
 keymap.set("n", "<C-S-j>", "<C-w>-")
 
-keymap.set("n", "<leader>fz", "<cmd>lua require('fzf-lua').files()<CR>", { desc = "Fuzzy Find Files" })
-keymap.set("n", "<leader>fg", "<cmd>lua require('fzf-lua').live_grep()<CR>", { desc = "Live Grep" })
-
 keymap.set("n", "<leader>se", vim.diagnostic.open_float, { noremap = true, silent = true })
 keymap.set("n", "<Leader>o", "<CMD>Oil<CR>", { desc = "Abrir Oil.nvim" })
