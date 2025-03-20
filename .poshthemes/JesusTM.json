@@ -16,15 +16,6 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{.Icon}} ",
-          "foreground": "p:os",
-          "type": "os",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
           "template": "{{ .UserName }}@{{ .HostName }} ",
           "foreground": "#8fd4ca",
           "type": "session",

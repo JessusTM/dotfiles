@@ -41,3 +41,10 @@ Desde el directorio clonado «dotfiles»:
 rm -rf ~/.tmux.conf 
 cp -r .tmux.conf ~
 ```
+---
+### POSHTHEME
+Desde el directorio clonado «dotfiles»:
+```bash
+rm -rf ~/.cache/oh-my-posh/themes/JesusTM.json
+cp .poshthemes/JesusTM.json ~/.cache/oh-my-posh/themes/
+```
