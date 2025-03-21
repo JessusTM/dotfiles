@@ -26,6 +26,8 @@ vim.diagnostic.config({
   update_in_insert = false,
 })
 
+vim.g.snacks_animate = true
+
 vim.fn.sign_define("DiagnosticSignError", { text = "", texthl = "DiagnosticSignError" })
 vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
 vim.fn.sign_define("DiagnosticSignInfo", { text = "ℹ", texthl = "DiagnosticSignInfo" })
