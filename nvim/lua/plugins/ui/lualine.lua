@@ -18,7 +18,7 @@ return {
         {
           "diagnostics",
           sources = { "nvim_lsp" },
-          symbols = { error = " ", warn = " ", info = " ", hint = " " },
+          symbols = { error = " ", warn = " ", info = " ", hint = " " },
         },
       },
       lualine_c = { "filename" },
