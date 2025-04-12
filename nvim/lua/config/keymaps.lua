@@ -10,14 +10,6 @@ keymap.set("n", "-", "<C-x>")
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
--- Save file and quit
-keymap.set("n", "<Leader>w", ":update<Return>", opts)
-keymap.set("n", "<Leader>q", ":quit<Return>", opts)
-keymap.set("n", "<Leader>Q", ":qa<Return>", opts)
-
--- File explorer with NvimTree
-keymap.set("n", "<Leader>f", ":NvimTreeFindFile<Return>", opts)
-
 -- Split window
 keymap.set("n", "sv", ":split<Return>", opts)
 keymap.set("n", "ss", ":vsplit<Return>", opts)
@@ -27,11 +19,8 @@ keymap.set("n", "sh", "<C-w>h")
 keymap.set("n", "sj", "<C-w>j")
 keymap.set("n", "sl", "<C-w>l")
 
--- Resize window
-keymap.set("n", "<C-S-h>", "<C-w><")
-keymap.set("n", "<C-S-l>", "<C-w>>")
-keymap.set("n", "<C-S-k>", "<C-w>+")
-keymap.set("n", "<C-S-j>", "<C-w>-")
+-- Explore
+keymap.set("n", "<leader>o", vim.cmd.Ex)
 
+-- Show Errors
 keymap.set("n", "<leader>se", vim.diagnostic.open_float, { noremap = true, silent = true })
-keymap.set("n", "<Leader>o", "<CMD>Oil<CR>", { desc = "Abrir Oil.nvim" })

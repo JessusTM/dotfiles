@@ -1,9 +1,5 @@
 local M = {}
 
--- Tabla de caracteres hexadecimales
-local hexChars = "0123456789abcdef"
-
--- Valida y convierte un valor hexadecimal a RGB
 function M.hex_to_rgb(hex)
   if not hex or #hex ~= 7 or hex:sub(1, 1) ~= "#" then
     error("Formato hexadecimal inválido. Debe ser del tipo #RRGGBB.")
@@ -21,7 +17,6 @@ function M.hex_to_rgb(hex)
   return ret
 end
 
--- Convierte RGB a HSL
 function M.rgbToHsl(r, g, b)
   local max, min = math.max(r, g, b), math.min(r, g, b)
   local h, s, l = 0, 0, (max + min) / 2
@@ -42,7 +37,6 @@ function M.rgbToHsl(r, g, b)
   return h * 360, s * 100, l * 100
 end
 
--- Convierte HSL a RGB
 local function hue2rgb(p, q, t)
   if t < 0 then
     t = t + 1
@@ -76,7 +70,6 @@ function M.hslToRgb(h, s, l)
   return r * 255, g * 255, b * 255
 end
 
--- Convierte Hexadecimal a HSL
 function M.hexToHSL(hex)
   local rgb = M.hex_to_rgb(hex)
   local h, s, l = M.rgbToHsl(rgb[1], rgb[2], rgb[3])
@@ -84,14 +77,12 @@ function M.hexToHSL(hex)
   return string.format("hsl(%d, %d%%, %d%%)", math.floor(h + 0.5), math.floor(s + 0.5), math.floor(l + 0.5))
 end
 
--- Convierte HSL a Hexadecimal
 function M.hslToHex(h, s, l)
   local r, g, b = M.hslToRgb(h / 360, s / 100, l / 100)
 
   return string.format("#%02x%02x%02x", math.floor(r + 0.5), math.floor(g + 0.5), math.floor(b + 0.5))
 end
 
--- Reemplaza colores Hex por HSL en la línea actual
 function M.replaceHexWithHSL()
   local line_number = vim.api.nvim_win_get_cursor(0)[1]
   local line_content = vim.api.nvim_buf_get_lines(0, line_number - 1, line_number, false)[1]

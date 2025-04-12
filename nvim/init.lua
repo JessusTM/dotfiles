@@ -1,38 +1,16 @@
 require("config.lazy")
+require("config.rose-pine.rosepine-treesitter")
+require("config.rose-pine.rosepine-telescope")
 
-if vim.fn.argc() == 0 then
-  vim.defer_fn(function()
-    if vim.bo.filetype ~= "lazy" then
-      require("oil").open(vim.fn.getcwd())
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    if vim.fn.argc() == 0 then
+      vim.cmd("Explore")
     end
-  end, 0)
-end
-
-vim.diagnostic.config({
-  virtual_text = {
-    prefix = "●",
-    source = "if_many",
-    format = function(diagnostic)
-      local message = diagnostic.message
-      if #message > 50 then
-        return message:sub(1, 47) .. ".."
-      end
-      return message
-    end,
-  },
-  signs = true,
-  underline = true,
-  severity_sort = true,
-  update_in_insert = false,
+  end,
 })
 
 vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
 vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
 vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
 vim.fn.sign_define("DiagnosticSignHint", { text = " ", texthl = "DiagnosticSignHint" })
-
-require("noice").setup({
-  cmdline = {
-    view = "cmdline", -- o el view que prefieras
-  },
-})

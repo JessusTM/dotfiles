@@ -17,33 +17,26 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.markdown" },
     { import = "plugins" },
-    { import = "plugins.editor" },
-    { import = "plugins.languages" },
-    { import = "plugins.ui" },
+  },
+  -- Desactivar pop up's de cambios detectados
+  change_detection = {
+    enabled = true,
+    notify = false,
+  },
+  checker = {
+    enabled = true,
+    notify = false,
   },
   defaults = {
     lazy = false,
     version = false,
   },
-  change_detection = {
-    enabled = false, -- Desactiva la detección automática de cambios
-  },
   install = { colorscheme = { "tokyonight", "habamax" } },
-  checker = {
-    enabled = true,
-    notify = false,
-  },
   performance = {
     rtp = {
       disabled_plugins = {
         "gzip",
-        -- "matchit",
-        -- "matchparen",
-        -- "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",

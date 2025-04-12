@@ -21,7 +21,13 @@ return {
           symbols = { error = " ", warn = " ", info = " ", hint = " " },
         },
       },
-      lualine_c = { "filename" },
+      lualine_c = {
+        {
+          "filename",
+          path = 3,
+        },
+      },
+
       lualine_x = { "filetype" }, -- Added encoding
       lualine_y = { "progress" },
       lualine_z = { "location" },
