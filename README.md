@@ -48,3 +48,10 @@ Desde el directorio clonado «dotfiles»:
 rm -rf ~/.cache/oh-my-posh/themes/JesusTM.json
 cp .poshthemes/JesusTM.json ~/.cache/oh-my-posh/themes/
 ```
+---
+### FASTFETCH
+Desde el directorio clonado «dotfiles»:
+```bash
+rm -rf ~/.config/fastfetch
+cp -r fastfetch ~/.config 
+```
