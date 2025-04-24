@@ -1,6 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    lazy = false,
     opts = function(_, opts)
       opts.ensure_installed = vim.tbl_extend("force", opts.ensure_installed or {}, {
         "javascript",
@@ -24,7 +25,6 @@ return {
         "toml",
         "vimdoc",
       })
-
       opts.ignore_install = { "help" }
 
       opts.query_linter = {

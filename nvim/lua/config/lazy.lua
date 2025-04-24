@@ -19,7 +19,6 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     { import = "plugins" },
   },
-  -- Desactivar pop up's de cambios detectados
   change_detection = {
     enabled = true,
     notify = false,
@@ -32,7 +31,6 @@ require("lazy").setup({
     lazy = false,
     version = false,
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
   performance = {
     rtp = {
       disabled_plugins = {

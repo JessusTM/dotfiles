@@ -1,6 +1,4 @@
 require("config.lazy")
-require("config.rose-pine.rosepine-treesitter")
-require("config.rose-pine.rosepine-telescope")
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()

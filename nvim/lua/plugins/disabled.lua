@@ -4,17 +4,6 @@ return {
     enabled = false,
   },
   {
-    "nvim-lualine/lualine.nvim",
-    enabled = false,
-  },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      -- don't let LazyVim load a colorscheme
-      colorscheme = function() end,
-    },
-  },
-  {
     "folke/snacks.nvim",
     opts = {
       dashboard = { enabled = false },
