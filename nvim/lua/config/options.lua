@@ -13,7 +13,11 @@ vim.opt.smartindent = true
 vim.opt.splitkeep = "cursor"
 vim.opt.inccommand = "split"
 vim.o.laststatus = 3 -- Barra de estado global (solo una barra abajo)
-vim.opt.cmdheight = 0
+vim.opt.showmode = true
+vim.opt.cmdheight = 1
 
 -- PORTAPAPELES DEL SISTEMA
 vim.opt.clipboard = "unnamedplus"
+
+-- SOPORTE COLORES
+vim.opt.termguicolors = true

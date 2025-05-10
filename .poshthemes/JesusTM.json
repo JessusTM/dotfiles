@@ -53,6 +53,16 @@
           "style": "plain"
         },
         {
+          "type": "docker",
+          "style": "plain",
+          "foreground": "p:blue",
+          "properties": {
+            "display_container_name": true,
+            "prefix": "\uf308 "
+          },
+          "template": " {{ .Context }} "
+        },
+        {
           "properties": {
             "cache_duration": "none"
           },

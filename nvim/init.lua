@@ -1,4 +1,7 @@
 require("config.lazy")
+require("config.options")
+require("config.statusline").setup()
+require("config.showmode").setup()
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
