@@ -21,6 +21,11 @@ alias bat='batcat'
 export BAT_PAGER=''
 export BAT_STYLE='plain'
 
+# ------ CARGAR ALIAS ------ 
+for file in ~/Desktop/dotfiles/alias/*.zsh; do
+  source "$file"
+done
+
 # ------ ZSH SYNTAX HIGHLIGHTING ------
 source /home/jesus/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/zsh-syntax-highlighting/themes/rose-pine-zsh-syntax-highlighting.zsh
