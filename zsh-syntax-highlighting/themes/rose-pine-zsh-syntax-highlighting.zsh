@@ -23,7 +23,7 @@ ZSH_HIGHLIGHT_STYLES[builtin]='fg=#c4a7e7'
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=#c4a7e7'
 ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=#c4a7e7'
 ## Punctuation
-ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=#eb6f92'
+ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=#e0def4'
 ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]='fg=#e0def4'
 ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter-unquoted]='fg=#e0def4'
 ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]='fg=#e0def4'
