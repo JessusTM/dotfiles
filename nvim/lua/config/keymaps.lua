@@ -22,8 +22,5 @@ keymap.set("n", "sl", "<C-w>l")
 -- Explore
 keymap.set("n", "<leader>o", vim.cmd.Ex)
 
--- Delete word
-keymap.set("i", "<A-d>", "<C-o>dw", { noremap = true, silent = true })
-
 -- Show Errors
 keymap.set("n", "<leader>se", vim.diagnostic.open_float, { noremap = true, silent = true })
