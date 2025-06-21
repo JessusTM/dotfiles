@@ -11,12 +11,24 @@ git config --global core.pager "cat"
 ### ZSH 
 Desde el directorio clonado «dotfiles»:
 ```bash
+sudo apt install zsh
+chsh -s $(which zsh)
+```
+Luego cerrar sesión. Finalmente
+```bash
 rm -rf ~/.zshrc
 cp -r .zshrc ~
 ```
 ---
-### ZSH Syntax Highlighting
+### Oh My ZSH
 ```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+---
+### ZSH Syntax Highlighting
+Parado en ~:
+```bash
+cp -r ~/Desktop/dotfiles/zsh-syntax-highlighting .
 source /home/jesus/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/zsh-syntax-highlighting/themes/rose-pine-zsh-syntax-highlighting.zsh
 ```
@@ -31,6 +43,7 @@ cp -r .vscode ~
 ### NVIM 
 Desde el directorio clonado «dotfiles»:
 ```bash
+brew install nvim
 rm -rf ~/.config/nvim 
 cp -r nvim ~/.config
 ```
@@ -38,20 +51,17 @@ cp -r nvim ~/.config
 ### TMUX
 Desde el directorio clonado «dotfiles»:
 ```bash
+sudo apt install tmux
 rm -rf ~/.tmux.conf 
 cp -r .tmux.conf ~
-```
----
-### POSHTHEME
-Desde el directorio clonado «dotfiles»:
-```bash
-rm -rf ~/.cache/oh-my-posh/themes/JesusTM.json
-cp .poshthemes/JesusTM.json ~/.cache/oh-my-posh/themes/
 ```
 ---
 ### FASTFETCH
 Desde el directorio clonado «dotfiles»:
 ```bash
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+sudo apt update
+sudo apt install fastfetch
 rm -rf ~/.config/fastfetch
 cp -r fastfetch ~/.config 
 ```
