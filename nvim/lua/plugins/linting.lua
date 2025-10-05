@@ -10,7 +10,22 @@ return {
       javascriptreact = { "eslint_d --no-unused-vars" },
       typescriptreact = { "eslint_d --no-unused-vars" },
       svelte = { "eslint_d" },
-      python = { "pylint" },
+      python = { "ruff" },
+    }
+
+    -- Ignora E401/E701 también cuando corre Ruff por nvim-lint
+    lint.linters.ruff = lint.linters.ruff or require("lint.linters.ruff")
+    lint.linters.ruff.args = {
+      "check",
+      "--quiet",
+      "--line-length=120",
+      "--ignore",
+      "E401,E701",
+      "--stdin-filename",
+      function()
+        return vim.api.nvim_buf_get_name(0)
+      end,
+      "-",
     }
 
     lint.ignore = {
